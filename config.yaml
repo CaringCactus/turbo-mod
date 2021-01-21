@@ -3,6 +3,7 @@ user_agent: ''
 client_id: ''
 username: ''
 password: ''
+mod_sub: ''
 nsfw_subs:
   - gonewild
   - pussy
