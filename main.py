@@ -1,7 +1,5 @@
 import praw, yaml, time, traceback
 
-print('Starting up.')
-
 with open("config.yaml") as config_file:
     config = yaml.safe_load(config_file)
     client_id = config["client_id"]
@@ -9,10 +7,9 @@ with open("config.yaml") as config_file:
     username = config["username"]
     password = config["password"]
     user_agent = config["user_agent"]
+    mod_sub = config["mod_sub"]
     subs = config["nsfw_subs"]
     removal_message = config["removal_message"]
-    
-print('YAML loaded.')
 
 reddit = praw.Reddit(client_id=client_id,
                      client_secret=client_secret,
@@ -20,11 +17,9 @@ reddit = praw.Reddit(client_id=client_id,
                      username=username,
                      password=password)
 
-print('Authenticated.')
-
 while True:
     try:
-        for submission in reddit.subreddit("lesub").stream.submissions(skip_existing=True):
+        for submission in reddit.subreddit(mod_sub).stream.submissions(skip_existing=True):
             print('New submission!')
             is_nsfw = False
             author = submission.author.name
