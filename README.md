@@ -4,6 +4,8 @@ Removes post submissions from your moderated subreddit if the user has publicall
 
 As a few examples, the config.yaml file has a small list of NSFW subreddit names already added. You may edit and remove them, and change any variable names in the main.py file as you please.
 
+This code is the bare basics as described above, you can add more moderation features by editing the python code in main.py to fit your needs; you'll likely need to reference [PRAW](https://praw.readthedocs.io/en/stable/code_overview/praw_models.html) documention and view [r/redditdev](https://www.reddit.com/r/redditdev/) to learn more on your own.
+
 # Setup
 
 Clone the github repository, change directories:
