@@ -1,6 +1,6 @@
 # turbo-mod
 
-Removes post submissions from your moderated subreddit if the user has publically interacted (commented or posted) from any subreddit you add to your list.
+Removes post submissions from your moderated subreddit if the user has publically interacted (commented or posted) from any subreddit you added to your list.
 
 As a few examples, the config.yaml file has a small list of NSFW subreddit names already added. You may edit and remove them, and change any variable names in the main.py file as you please.
 
