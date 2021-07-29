@@ -17,14 +17,14 @@ Install the requirements:
 
 Edit the `config.yaml` file with your bot credientials (Never give this information out to anyone, keep your client_secret a secret):
 
-- `client_secret` is your reddit client secret
-- `user_agent` is your unique user agent
-- `client_id` is your client id
-- `username` is your username
-- `password` is your password
-- `mod_sub` is the subreddit you want the bot to operate in
-- `nsfw_subs` is the subreddit(s) you don't like
-- `removal_message` is the comment that the bot will make after removing the submission
+- `client_secret` is your reddit client secret.
+- `user_agent` is your unique user agent.
+- `client_id` is your client id.
+- `username` is your username.
+- `password` is your password.
+- `mod_sub` is the subreddit you want the bot to operate in.
+- `nsfw_subs` is the subreddit(s) you don't like.
+- `removal_message` is the comment that the bot will make after removing the submission.
 
 Run the `main.py` file:
 
@@ -41,7 +41,7 @@ Heroku is an online cloud hosting service for applications (code), it's the best
 First you would probably want to create a new Reddit account for your bot.
 
 - Go to [Reddit](https://www.reddit.com) and create an account.
-- Login and go to Preferences > Apps and click "create another app..."
+- Login and go to Preferences > Apps and click "create another app...".
 - Type a name for your app and choose "script". Add a description and provide the "about" and "redirect" URIs.
 
 Next, you will need to create a new heroku account if you don't have one already.
@@ -49,7 +49,7 @@ Next, you will need to create a new heroku account if you don't have one already
 - Go to [Heroku](https://www.heroku.com) and create an account.
 - Create a Heroku app.
 - Download and install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
-- Open Bash or CMD and login to Heroku CLI '$ heroku login'.
+- Open Bash or CMD and login to Heroku CLI `$ heroku login`.
 
 ### Pre-deployment
 - Clone the current repository to your local storage.
@@ -59,15 +59,15 @@ Next, you will need to create a new heroku account if you don't have one already
 
 ### Deployment
 - Open Bash or CMD and cd to your project folder.
-- Change your remote to '$ heroku git:remote -a your_heroku_app_name'
-- Add a buildpack to Heroku so it can understand that this is a Python app. 'heroku buildpacks:set heroku/python'
-- Commit your changes. 'git add .', 'git commit -m "make better"'.
-- Deploy your app by typing 'git push heroku master'.
-- To view what the app is printing at a given time type 'heroku logs'.
+- Change your remote to `$ heroku git:remote -a your_heroku_app_name`.
+- Add a buildpack to Heroku so it can understand that this is a Python app. `heroku buildpacks:set heroku/python`
+- Commit your changes. `git add .`, `git commit -m "make better"`.
+- Deploy your app by typing `git push heroku master`.
+- To view what the app is printing at a given time type `heroku logs`.
 
 ### Post-deployment
 - Go to [Heroku](https://www.heroku.com) and go to you app administration.
 - Select "Resources" and press the pen button beside your dyno.
 - Change the slider to active and press confirm.
 - Press "More" on the top right corner and then "View Logs".
-- There should be a line 'State changed from starting to up', that means that your app is up and running.
+- There should be a line `State changed from starting to up`, that means that your app is up and running.
