@@ -63,7 +63,7 @@ Next, you will need to create a new heroku account if you don't have one already
 - Add a buildpack to Heroku so it can understand that this is a Python app. `heroku buildpacks:set heroku/python`
 - Commit your changes. `git add .`, `git commit -m "make better"`.
 - Deploy your app by typing `git push heroku master`.
-- To view what the app is printing at a given time type `heroku logs`.
+- You can view what the app is printing at a given time by typing `heroku logs`.
 
 ### Post-deployment
 - Go to [Heroku](https://www.heroku.com) and go to you app administration.
