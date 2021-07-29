@@ -1,10 +1,10 @@
-### turbo-mod
+# turbo-mod
 
 Removes post submissions from your moderated subreddit if the user has publically interacted (commented or posted) from any subreddit you add to your list.
 
 As a few examples, the config.yaml file has a small list of NSFW subreddit names already added. You may edit and remove them, and change any variable names in the main.py file as you please.
 
-## Setup
+# Setup
 
 Clone the github repository, change directories:
 
@@ -30,14 +30,14 @@ Run the `main.py` file:
 
     python3 main.py
    
-### Prerequisites for hosting your bot's code
+# Prerequisites for hosting your bot's code
 If you want to try out the bot locally on your computer, you only need to install PRAW. If the app is to be deployed directly to Heroku, all needed modules are described in the requirements.txt file.
 
 Heroku is an online cloud hosting service for applications (code), it's the best way to run your one (1) bot for free. Unverified accounts get 550 free hours per month (which is not enough to run your bot 24/7), so you will need to verify your heroku account with a credit card to get 1000 free hours per month. You can learn more about verification on their [webstie here](https://www.heroku.com/free).
 
 ## Deployment
 
-# First steps
+### First steps
 First you would probably want to create a new Reddit account for your bot.
 
 - Go to [Reddit](https://www.reddit.com) and create an account.
@@ -51,13 +51,13 @@ Next, you will need to create a new heroku account if you don't have one already
 - Download and install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli).
 - Open Bash or CMD and login to Heroku CLI '$ heroku login'.
 
-# Pre-deployment
+### Pre-deployment
 - Clone the current repository to your local storage.
 - Rename the folder name to anything you need.
 - Open the friendbot.py and hintbot.py files and add your Reddit user and app info.
 - Make changes to both of these files to suit your needs.
 
-# Deployment
+### Deployment
 - Open Bash or CMD and cd to your project folder.
 - Change your remote to '$ heroku git:remote -a your_heroku_app_name'
 - Add a buildpack to Heroku so it can understand that this is a Python app. 'heroku buildpacks:set heroku/python'
@@ -65,7 +65,7 @@ Next, you will need to create a new heroku account if you don't have one already
 - Deploy your app by typing 'git push heroku master'.
 - To view what the app is printing at a given time type 'heroku logs'.
 
-# Post-deployment
+### Post-deployment
 - Go to [Heroku](https://www.heroku.com) and go to you app administration.
 - Select "Resources" and press the pen button beside your dyno.
 - Change the slider to active and press confirm.
