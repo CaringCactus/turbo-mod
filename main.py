@@ -24,13 +24,13 @@ while True:
             is_nsfw = False
             author = submission.author.name
             print('author:',author)
-            for submission_2 in reddit.redditor(author).submissions.new(limit=None):
-                if submission_2.subreddit.display_name in subs:
+            for acct_submission in reddit.redditor(author).submissions.new(limit=None):
+                if acc_submission.subreddit.display_name in subs:
                     is_nsfw = True
                     print('nsfw post!')
                     break
-            for comment in reddit.redditor(author).comments.new(limit=None):
-                if comment.subreddit.display_name in subs:
+            for acct_comment in reddit.redditor(author).comments.new(limit=None):
+                if acct_comment.subreddit.display_name in subs:
                     is_nsfw = True
                     print('nsfw comment!')
                     break
@@ -40,7 +40,7 @@ while True:
                 submission.mod.remove()
                 submission.reply(removal_message.format(author))
             else:
-                print('No bad posts found.')
+                print('No NSFW activity found.')
     except Exception:
         print(traceback.format_exc())
         time.sleep(60)
