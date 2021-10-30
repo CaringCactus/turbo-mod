@@ -56,8 +56,8 @@ Next, you will need to create a new heroku account if you don't have one already
 ### Pre-deployment
 - Clone the current repository to your local storage.
 - Rename the folder name to anything you need.
-- Open the friendbot.py and hintbot.py files and add your Reddit user and app info.
-- Make changes to both of these files to suit your needs.
+- Open the config.yaml and add your Reddit user and app info.
+- Make changes to any wording as you please, both in config.yaml or main.py to suit your needs.
 
 ### Deployment
 - Open Bash or CMD and cd to your project folder.
