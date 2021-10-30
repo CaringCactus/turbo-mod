@@ -1,6 +1,6 @@
 # turbo-mod
 
-Removes post submissions from your moderated subreddit if the user has publically interacted (commented or posted) from any subreddit you added to your list.
+Removes post submissions from your moderated subreddit if the user has publically interacted (commented or posted) from any subreddit you add to the list in the `config.yaml` file.
 
 As a few examples, the config.yaml file has a small list of NSFW subreddit names already added. You may edit and remove them, and change any variable names in the main.py file as you please.
 
@@ -33,7 +33,7 @@ Run the `main.py` file:
     python3 main.py
    
 # Prerequisites for hosting your bot's code
-If you want to try out the bot locally on your computer, you only need to install PRAW. If the app is to be deployed directly to Heroku, all needed modules are described in the requirements.txt file.
+If you want to try out the bot locally on your computer, you only need to install PRAW, but it's more convenient to host the code online through cloud services such as Heroku. All needed modules are described in the requirements.txt file.
 
 Heroku is an online cloud hosting service for applications (code), it's the best way to run your one (1) bot for free. Unverified accounts get 550 free hours per month (which is not enough to run your bot 24/7), so you will need to verify your heroku account with a credit card to get 1000 free hours per month. You can learn more about verification on their [webstie here](https://www.heroku.com/free).
 
