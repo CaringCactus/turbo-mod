@@ -8,7 +8,7 @@ This code is the bare basics as described above, you can add more moderation fea
 
 If you want the bot to also remove comments made on your moderated subreddit alongside post submissions you would need to repeat the same procedures in this guide (except creating a new reddit account, use the same credentials) to host the same code (with a few minor edits in main.py) separaetly on a second heroku account you make. 
 
-The only edits needed to make the code scan for comments instead of posts is to change the main `for` loop in `main.py`: `for comment in reddit.subreddit(mod_sub).stream.comments(skip_existing=True):` and change the variable name `submission` to the name `comment` for lines 25, 40, 41.
+The only edits needed to make the code scan for comments instead of posts is to change the main `for` loop in `main.py` to `for comment in reddit.subreddit(mod_sub).stream.comments(skip_existing=True):` and change the variable name `submission` to the name `comment` for lines 25, 40, 41.
 
 # Setup
 
