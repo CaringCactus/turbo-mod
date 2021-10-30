@@ -6,6 +6,8 @@ As a few examples, the config.yaml file has a small list of NSFW subreddit names
 
 This code is the bare basics as described above, you can add more moderation features by editing the python code in main.py to fit your needs; you'll likely need to reference [PRAW](https://praw.readthedocs.io/en/stable/code_overview/praw_models.html) documention and view [r/redditdev](https://www.reddit.com/r/redditdev/) to learn more on your own.
 
+If you want the bot to also remove comments made on your moderated subreddit alongside post submissions you would need to repeat the same procedures in this guide (except creating a new reddit account, use the same credentials) to host on a second heroku account to edit/manage a separeate script. The only edit needed to make the code scan for comments instead of posts is to change the main 'for' loop in 'main.py': 'for comment in reddit.subreddit(mod_sub).stream.comments(skip_existing=True):'.
+
 # Setup
 
 Clone the github repository, change directories:
