@@ -47,7 +47,7 @@ Heroku is an online cloud hosting service for applications (code), it's the best
 First you would probably want to create a new Reddit account for your bot.
 
 - Go to [Reddit](https://www.reddit.com) and create an account.
-- Login and go to Preferences > Apps and click "create another app...".
+- Login and go to [Preferences > Apps](https://www.reddit.com/prefs/apps) and click "create another app...".
 - Type a name for your app and choose "script". Add a description and provide the "about" and "redirect" URIs.
 
 Next, you will need to create a new heroku account if you don't have one already.
