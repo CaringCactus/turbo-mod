@@ -52,8 +52,8 @@ First you would probably want to create a new Reddit account for your bot.
 
 ### Deployment
 - To locally run your bot: Open Bash or CMD and cd to your project folder, then run the program.
-- To run your bot in the cloud, follow the instructions from the cloud hosting service provided you are using.
+- To run your bot in the cloud, follow the instructions from the cloud service provider you are using.
 
 ### Post-deployment
-- If running locally on your computer, you will have to leave your computer on with the powershell running. For long-term use, you should think about subscribing to a cloud service provider, or creating your own private server at home with a device.
-- If using a cloud service, verify online the app has been turned on with enough dynos to run it.
+- If running locally on your computer, you will have to leave your computer on with the powershell running. For long-term use, you should think about subscribing to a cloud service, or creating your own private server at home with a dedicated device.
+- If using a cloud service, verify online the app has been turned and setup propely.
