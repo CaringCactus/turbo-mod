@@ -17,30 +17,73 @@ reddit = praw.Reddit(client_id=client_id,
                      username=username,
                      password=password)
 
+streamSubmissions = reddit.subreddit(mod_sub).stream.submissions(pause_after=-1, skip_existing=True)
+streamComments = reddit.subreddit(mod_sub).stream.comments(pause_after=-1, skip_existing=True)
+
+
+print('About to start while loop!')
 while True:
     try:
-        for submission in reddit.subreddit(mod_sub).stream.submissions(skip_existing=True):
-            print('New submission!')
-            is_nsfw = False
-            author = submission.author.name
-            print('author:',author)
-            for acct_submission in reddit.redditor(author).submissions.new(limit=None):
-                if acc_submission.subreddit.display_name in subs:
-                    is_nsfw = True
-                    print('nsfw post!')
-                    break
-            for acct_comment in reddit.redditor(author).comments.new(limit=None):
-                if acct_comment.subreddit.display_name in subs:
-                    is_nsfw = True
-                    print('nsfw comment!')
-                    break
-            print('IS NSFW???',is_nsfw)
-            if is_nsfw == True:
-                print('removed submission')
-                submission.mod.remove()
-                submission.reply(removal_message.format(author))
+        for submission in streamSubmissions:
+            if submission is None:
+                break
             else:
-                print('No NSFW activity found.')
+                is_nsfw = False
+                author = submission.author.name
+                
+                userSubmissions = reddit.redditor(author).submissions.new(limit=None)
+                for acct_submission in userSubmissions:
+                    if acct_submission.subreddit.display_name in subs:
+                        is_nsfw = True
+                        break
+                    else:
+                        break
+                userComments = reddit.redditor(author).comments.new(limit=None)
+                for acct_comment in userComments:
+                    if acct_comment.subreddit.display_name in subs:
+                        is_nsfw = True
+                        break
+                    else:
+                        break
+                if is_nsfw == True:
+                    print('New submission from u/' + author + ': Removed due to NSFW account activity found.')
+                    submission.mod.lock()
+                    submission.mod.remove()
+                    submission.reply(removal_message.format(author))
+                    break
+                else:
+                    print('New submission from u/' + author + ': Clean account.')
+                    break
+                    
+        for comment in streamComments:
+            if comment is None:
+                break
+            else:
+                is_nsfw = False
+                author = submission.author.name
+                
+                userSubmissions = reddit.redditor(author).submissions.new(limit=None)
+                for acct_submission in userSubmissions:
+                    if acct_submission.subreddit.display_name in subs:
+                        is_nsfw = True
+                        break
+                    else:
+                        break
+                userComments = reddit.redditor(author).comments.new(limit=None)
+                for acct_comment in userComments:
+                    if acct_comment.subreddit.display_name in subs:
+                        is_nsfw = True
+                        break
+                    else:
+                        break
+                if is_nsfw == True:
+                    print('New comment from u/' + author + ': Removed due to NSFW account activity found.')
+                    comment.mod.remove()
+                    comment.reply(removal_message.format(author))
+                    break
+                else:
+                    print('New comment from u/' + author + ': Clean account.')
+                    break
     except Exception:
         print(traceback.format_exc())
         time.sleep(60)
