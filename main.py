@@ -36,14 +36,10 @@ while True:
                     if acct_submission.subreddit.display_name in subs:
                         is_nsfw = True
                         break
-                    else:
-                        break
                 userComments = reddit.redditor(author).comments.new(limit=None)
                 for acct_comment in userComments:
                     if acct_comment.subreddit.display_name in subs:
                         is_nsfw = True
-                        break
-                    else:
                         break
                 if is_nsfw == True:
                     print('New submission from u/' + author + ': Removed due to NSFW account activity found.')
@@ -67,14 +63,10 @@ while True:
                     if acct_submission.subreddit.display_name in subs:
                         is_nsfw = True
                         break
-                    else:
-                        break
                 userComments = reddit.redditor(author).comments.new(limit=None)
                 for acct_comment in userComments:
                     if acct_comment.subreddit.display_name in subs:
                         is_nsfw = True
-                        break
-                    else:
                         break
                 if is_nsfw == True:
                     print('New comment from u/' + author + ': Removed due to NSFW account activity found.')
