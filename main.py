@@ -60,7 +60,7 @@ while True:
                 break
             else:
                 is_nsfw = False
-                author = submission.author.name
+                author = comment.author.name
                 
                 userSubmissions = reddit.redditor(author).submissions.new(limit=None)
                 for acct_submission in userSubmissions:
