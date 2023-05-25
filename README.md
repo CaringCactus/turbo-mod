@@ -56,4 +56,4 @@ First you would probably want to create a new Reddit account for your bot.
 
 ### Post-deployment
 - If running locally on your computer, you will have to leave your computer on with the powershell running. For long-term use, you should think about subscribing to a cloud service, or creating your own private server at home with a dedicated device.
-- If using a cloud service, verify online the app has been turned and setup propely.
+- If using a cloud service, verify online the app has been turned on and setup propely.
