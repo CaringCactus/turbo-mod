@@ -56,4 +56,4 @@ First you would probably want to create a new Reddit account for your bot.
 
 ### Post-deployment
 - For short-term use to run locally on your computer, you will have to leave your computer on with the powershell running 24/7 without sleeping, and always have it connected to the internet. For long-term use, you should think about subscribing to a cloud service, or creating your own private server at home with a dedicated device (e.g., raspberry pi).
-- If using a cloud service, verify online the app has been turned on, is running, and is setup propely.
+- If using a cloud service, verify online the app has been turned on, is running, and is setup properly.
